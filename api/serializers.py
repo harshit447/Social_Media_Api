@@ -12,8 +12,8 @@ class CommentSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class PostSerializer(serializers.ModelSerializer):
-    comments = CommentSerializer(many=True)
-    likes = serializers.IntegerField(default=0)
+    comments = CommentSerializer(many=True, required=False)
+    likes = serializers.IntegerField( required=False)
     class Meta:
         model = Post
         fields = ['id', 'title', 'description', 'created_at', 'comments', 'likes']
