@@ -92,8 +92,7 @@ WSGI_APPLICATION = 'socialmedia.wsgi.application'
 
 DATABASE_URL=os.getenv('DATABASE_URL')
 DATABASES = {
-    "default": 
-        dj_database_url.config()
+    "default": dj_database_url.parse(DATABASE_URL)
     
 }
 
