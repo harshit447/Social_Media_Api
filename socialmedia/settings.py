@@ -90,7 +90,9 @@ WSGI_APPLICATION = 'socialmedia.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASE_URL=os.getenv('DATABASE_URL')
+DATABASE_URL='postgres://harry:yYo6uOeQhv6G4JME2RH5SjvHMzXTxGeb@dpg-cg9th7keoogtbdscnr4g-a.oregon-postgres.render.com/social_media_api_tffu'
+os.getenv('DATABASE_URL')
+
 DATABASES = {
     "default": dj_database_url.parse(DATABASE_URL)
     
